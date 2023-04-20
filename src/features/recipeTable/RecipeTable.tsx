@@ -1,18 +1,25 @@
 import React from 'react';
 
 import { DataTable } from '../table/DataTable';
-import { rowData } from '../../app/domain';
-import { getRecipeSummaries } from '../../app/contollers/recipeManager'; 
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { loadRecipeData, recipeList, status } from './recipeTableSlice'
+import { convertRecipeListToTableData } from '../../app/helpers';
 
 export const RecipeTable = () => {
-    
+    const dispatch = useAppDispatch();
+    let recList = useAppSelector(recipeList);
     const testTableColumns: string[] = ['Recipe Name', 'Calories', 'Rating'];
-    const rows = getRecipeSummaries();
+    const state = useAppSelector(status);
 
-    console.log(rows)
-    console.log(testTableColumns)
-    return <DataTable
+
+    if(state === 'notLoaded'){
+        dispatch(loadRecipeData());
+    }
+    let rows = convertRecipeListToTableData(recList);
+    console.log(rows);
+
+    return state === 'idle' ? <DataTable
                 columns={testTableColumns}
-                rowData={rows}
-            />
+                rowData={rows === undefined ? []: rows}
+            /> : <div> loading!</div>
 }

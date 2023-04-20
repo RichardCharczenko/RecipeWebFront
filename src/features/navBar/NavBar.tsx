@@ -23,6 +23,9 @@ export function NavBar() {
 
 function createNavBarButtons(pages: string[]){
     let pageButtons: any[] = [];
-    pages.forEach(page => pageButtons.push( (<button className={styles.button}> {page}</button>) ));
+    for(let i = 0; i < pages.length; i++){
+        pageButtons.push( (<button key={i} className={styles.button}> {pages[i]}</button>))
+    }
+
     return pageButtons;
 }

@@ -12,3 +12,10 @@ export interface paginationData{
     totalEntries: number;
     rowsDisplayedPerPage: number;
 }
+
+export interface Recipe{
+    recipeName: string;
+    calories: number;
+    rating: number;
+    id: string;
+}

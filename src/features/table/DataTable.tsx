@@ -23,8 +23,7 @@ export function DataTable(props: any){
 
     let selectedRowId = useAppSelector(getSelectedRowId);
     let options = useAppSelector(getTableOptions);
-
-    //console.log(`${options} ${selectedRowId}`)
+    
     props.rowData.forEach((row: rowData) => {
         tableRows.push(buildRow(row, dispatch, selectedRowId === row.id))
     });
@@ -40,7 +39,7 @@ export function DataTable(props: any){
 function buildColumnHeads(columnTitles:string[]) {
     let headers: any = [];
     columnTitles.forEach((col:string) => {
-        headers.push(<th> {col} </th>)
+        headers.push(<th key={col}> {col} </th>)
     })
     return (
         <tr>
