@@ -1,0 +1,31 @@
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.tableBody > tr:nth-child(even) {
+    background-color: #C7E9B0;
+}
+
+.tableBody > tr:hover{ 
+    background-color: hsl(0, 0%, 93%);
+    transition: all 0.2s;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+ }
+
+thead{
+    background-color: #282A35;
+    color: #f1f1f1;
+}

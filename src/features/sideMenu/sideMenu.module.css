@@ -1,0 +1,35 @@
+.sideMenu{
+    font-family: arial, sans-serif;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background-color: #d5e9c7;
+    padding-top: 50px;
+}
+
+.menuButton{
+    width: 45%;
+    height: 30px;
+    background-color: #A4BC92;
+    color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 4px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.menuList {
+    border-top: solid green;
+}
+
+.menuItem {
+    padding-left: 10px;
+
+}
+
+.menuItem:hover{
+    background-color: hsl(0, 0%, 93%);
+    transition: 0.2s;
+    cursor: pointer;
+}
