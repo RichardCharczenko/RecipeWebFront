@@ -1,3 +1,26 @@
 .noSelection{
     font-size: 30px;
 }
+
+.recipeViewPane{
+    display: contents;
+}
+
+.buttonRow{
+    width: 100%;
+    top: -25%;
+    position: relative;
+    background-color: #C7E9B0;
+
+}
+
+.button{
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none ;
+    font-size: 30px;
+    background-color: #282A35;
+    cursor: pointer;
+    color: #f1f1f1;
+}

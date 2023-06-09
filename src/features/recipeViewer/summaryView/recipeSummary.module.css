@@ -1,0 +1,17 @@
+.recipeViewTitle{
+
+}
+
+.recipeSummaryView{
+    position: absolute;
+    top: 0%;
+}
+
+.summaryBox{
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    padding: 4px;
+    width: 700px;
+    right: 0px;
+    display: block;
+}
